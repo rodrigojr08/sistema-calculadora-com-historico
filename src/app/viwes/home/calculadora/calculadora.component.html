@@ -1,0 +1,50 @@
+<mat-tab-group mat-align-tabs="start" class="visual_table">
+    <mat-tab label="Histórico"> 
+        <div style="text-align: center;"    *ngFor="let post of posts | async">
+            {{ post.valor1}} {{post.operacao}} {{post.valor2}} ={{post.resultado}}
+          </div>
+    </mat-tab>
+    <mat-tab label="Calculadora"> 
+        <div class="fundo">
+            <div class="calc">
+                <input type="text" [value]="resultado" disabled />
+            <table>
+                
+                <tr>
+                    <td><button (click) = "Calcular('C')" class="botao">C</button></td>
+                    <td><button (click) = "Calcular('/')" class="botao">/</button></td>
+                    <td><button (click) = "Calcular('*')" class="botao">X</button></td>
+                    <td><button (click) = "Calcular('-')" class="botao">-</button></td>
+            
+                </tr>
+                <tr>
+                    <td><button (click) = "Calcular('7')" class="botao">7</button></td>
+                    <td><button (click) = "Calcular('8')" class="botao">8</button></td>
+                    <td><button (click) = "Calcular('9')" class="botao">9</button></td>
+                    <td ><button (click) = "Calcular('+')" class="botao">+</button></td> 
+                    
+            
+                </tr>
+                <tr>
+                    <td><button (click) = "Calcular('4')" class="botao">4</button></td>
+                    <td><button (click) = "Calcular('5')" class="botao">5</button></td>
+                    <td><button (click) = "Calcular('6')" class="botao">6</button></td>
+                    <td><button (click) = "Calcular('back')" class="botao"><mat-icon>backspace</mat-icon></button></td>
+                           
+                </tr>
+                <tr>
+                    <td><button (click) = "Calcular('1')" class="botao">1</button></td>
+                    <td><button (click) = "Calcular('2')" class="botao">2</button></td>
+                    <td><button (click) = "Calcular('3')" class="botao">3</button></td>
+                    <td rowspan="2"><button (click) = "Calcular('=')" class="botao" style="height: 108px;">=</button></td>        
+                </tr>
+                <tr>
+                    <td colspan="2"><button (click) = "Calcular('0')" class="botao" style="width: 107px;">0</button></td>
+                    <td><button (click) = "Calcular('.')" class="botao">.</button></td>
+                </tr>
+              
+            </table>
+        </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>

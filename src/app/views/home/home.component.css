@@ -1,0 +1,10 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.visual_header {
+    font-size: 1.5em;
+    height: 80px;
+}
+.visual_header mat-icon {
+    padding: 10px;
+}
